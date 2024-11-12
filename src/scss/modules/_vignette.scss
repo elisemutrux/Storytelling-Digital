@@ -1,3 +1,60 @@
 .vignette img {
   position: absolute;
+  left: calc(50% - 555px / 2);
+  top: 40%;
+  transform: translateY(-50%);
+  width: 555px;
+  height: 415px;
+}
+
+.vignette-question {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.66px;
+  position: absolute;
+  bottom: 1;
+  display: flex;
+  width: 555px;
+  height: 59px;
+  padding: 1px 41px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #000;
+  left: calc(50% - 555px / 2);
+  top: 66%;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &.t-second {
+    top: 74%;
+  }
+}
+
+.vignette-citation {
+  z-index: 100;
+}
+
+.vignette-interior-cadre {
+  position: absolute;
+  left: calc(51% - 555px / 2);
+  top: 40%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 415px;
+  background: #000;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0.9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
