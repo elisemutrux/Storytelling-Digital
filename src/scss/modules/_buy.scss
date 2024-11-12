@@ -1,0 +1,57 @@
+.buy-screen {
+  width: 100vw;
+  background: #fef7f7;
+  padding-top: 145px;
+  display: none;
+}
+
+.buy-book img {
+  height: 100%;
+}
+
+.buy-title {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  margin-bottom: -30px;
+}
+
+.buy-autor {
+  margin-top: -7px;
+  color: rgba(0, 0, 0, 0.59);
+  font-family: Avenir;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.buy-texte {
+  margin-top: 35px;
+  color: #000;
+  font-family: Avenir;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 150px;
+}
+
+hr {
+  margin-bottom: 85px;
+}
+
+.buy-infos {
+  color: #4a4343;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+.buy-second-infos {
+  color: #4a4343;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
