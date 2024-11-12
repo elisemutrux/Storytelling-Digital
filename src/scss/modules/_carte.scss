@@ -1,0 +1,78 @@
+.carte-img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.carte-skip-btn a {
+  position: fixed;
+  top: 50px;
+  right: 70px;
+  background: black;
+  color: white;
+  padding: 5px 41px;
+  z-index: 2;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.carte-skip-btn-decoration {
+  display: flex;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 2;
+}
+
+.carte-skip-btn-decoration img {
+  padding-left: 105px;
+  height: 75px;
+}
+
+.carte-cursor {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  background: black;
+  position: fixed;
+  bottom: 55px;
+  left: 3%;
+  z-index: 2;
+}
+
+.carte-slider-line {
+  position: absolute;
+  background: black;
+  height: 5px;
+  width: 90%;
+  position: fixed;
+  bottom: 30px;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+}
+
+.carte-slider-start {
+  position: absolute;
+  background: black;
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  position: fixed;
+  bottom: 22px;
+  left: 4%;
+  z-index: 2;
+}
+
+.carte-slider-end {
+  position: absolute;
+  background: black;
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  position: fixed;
+  bottom: 22px;
+  right: 4%;
+  z-index: 2;
+}
