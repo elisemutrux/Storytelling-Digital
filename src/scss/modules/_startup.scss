@@ -1,4 +1,33 @@
-.startup-background {
-  position: fixed;
-  inset: 1;
+.startup-background img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.startup-btn {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 51px;
+  background: #b22e5f;
+  padding: 5px 100px;
+  cursor: pointer;
+}
+
+.startup-btn-texte {
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0.75px;
+}
+
+.startup-btn-arrow {
+  padding-left: 35px;
+}
+
+.startup-screen.is-press {
+  display: none;
 }
