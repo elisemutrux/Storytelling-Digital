@@ -9,10 +9,12 @@ window.addEventListener("DOMContentLoaded", function () {
   var gameScreen = document.querySelector(".game");
   var map = document.querySelector(".carte-img");
   var firstImageBox = document.querySelector(".vignette-box.t-1");
-  var firstImageBtn1 = document.querySelector(".vignette-question");
-  var firstImageBtn2 = document.querySelector(".vignette-question.t-second");
-  var secondImageBox = document.querySelector(".vignette-box.t-2-1");
-  var imageQuestion = document.querySelector(".vignette-question");
+  var firstImageBtn1 = document.querySelector(".vignette-question.t-1");
+  var firstImageBtn2 = document.querySelector(
+    ".vignette-question.t-second.t-1"
+  );
+  var second1ImageBox = document.querySelector(".vignette-box.t-2-1");
+  var second2ImageBox = document.querySelector(".vignette-box.t-2-2");
 
   startupScreenBtn.addEventListener("click", () => {
     startupScreen.classList.add("is-press");
@@ -49,16 +51,17 @@ window.addEventListener("DOMContentLoaded", function () {
       //   if (isSkipped == false) {
       //     document.body.style.overflow = "hidden";
       //   }
-      //   image.style.zIndex = 1;
-      //   btnFirstImage.style.display = "block";
       // },
     });
 
-    tl.to(firstImageBtn1, {});
-
     firstImageBtn1.addEventListener("click", () => {
       firstImageBox.classList.add("is-invisible");
-      secondImageBox.classList.add("is-visible");
+      second1ImageBox.classList.add("is-visible");
+    });
+
+    firstImageBtn2.addEventListener("click", () => {
+      firstImageBox.classList.add("is-invisible");
+      second2ImageBox.classList.add("is-visible");
     });
   }
 });

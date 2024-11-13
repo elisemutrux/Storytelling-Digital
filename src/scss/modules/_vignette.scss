@@ -62,6 +62,9 @@
 .vignette-box {
   &.t-1 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
 
     &.is-invisible {
       display: none;
@@ -70,53 +73,133 @@
 
   &.t-2-1 {
     display: none;
-
     &.is-visible {
       display: block;
+    }
+
+    &.is-invisible {
+      display: none;
     }
   }
 
   &.t-2-2 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-3 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-4 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-5 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-6-1 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-6-2 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-7 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-8 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-9 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-10 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-11 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 }
