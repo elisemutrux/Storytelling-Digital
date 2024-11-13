@@ -63,6 +63,10 @@
   display: none;
 }
 
+.vignette-container-2 {
+  display: none;
+}
+
 .vignette-box {
   &.t-1 {
     &.is-visible {
@@ -106,10 +110,16 @@
 
   &.t-4 {
     display: none;
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-5 {
-    display: none;
     &.is-visible {
       display: block;
     }
@@ -143,13 +153,6 @@
 
   &.t-7 {
     display: none;
-    &.is-visible {
-      display: block;
-    }
-
-    &.is-invisible {
-      display: none;
-    }
   }
 
   &.t-8 {
