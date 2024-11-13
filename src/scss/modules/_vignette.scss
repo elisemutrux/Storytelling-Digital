@@ -62,10 +62,18 @@
 .vignette-box {
   &.t-1 {
     display: none;
+
+    &.is-invisible {
+      display: none;
+    }
   }
 
   &.t-2-1 {
     display: none;
+
+    &.is-visible {
+      display: block;
+    }
   }
 
   &.t-2-2 {
