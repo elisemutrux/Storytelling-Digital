@@ -19,6 +19,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var second1ImageBox = document.querySelector(".vignette-box.t-2-1");
   var second2ImageBox = document.querySelector(".vignette-box.t-2-2");
+  var second1ImageBtn1 = document.querySelector(".vignette-question.t-2-1");
+  var second1ImageBtn2 = document.querySelector(
+    ".vignette-question.t-second.t-2-1"
+  );
+  var second2ImageBtn1 = document.querySelector(".vignette-question.t-2-2");
+
+  var threeImageBox = document.querySelector(".vignette-box.t-3");
 
   startupScreenBtn.addEventListener("click", () => {
     startupScreen.classList.add("is-press");
@@ -56,6 +63,14 @@ window.addEventListener("DOMContentLoaded", function () {
       },
     });
 
+    tl.to(containerImage1, {
+      display: "none",
+    });
+
+    tl.to(map, {
+      scale: 1,
+    });
+
     firstImageBtn1.addEventListener("click", () => {
       firstImageBox.classList.add("is-invisible");
       second1ImageBox.classList.add("is-visible");
@@ -64,6 +79,22 @@ window.addEventListener("DOMContentLoaded", function () {
     firstImageBtn2.addEventListener("click", () => {
       firstImageBox.classList.add("is-invisible");
       second2ImageBox.classList.add("is-visible");
+    });
+
+    second1ImageBtn1.addEventListener("click", () => {
+      second1ImageBox.classList.add("is-invisible");
+      second2ImageBox.classList.add("is-visible");
+    });
+
+    second1ImageBtn2.addEventListener("click", () => {
+      second1ImageBox.classList.add("is-invisible");
+      threeImageBox.classList.add("is-visible");
+    });
+
+    second2ImageBtn1.addEventListener("click", () => {
+      second2ImageBox.classList.add("is-invisible");
+      threeImageBox.classList.add("is-visible");
+      document.body.style.overflow = "auto";
     });
   }
 });
