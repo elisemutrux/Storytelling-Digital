@@ -35,7 +35,7 @@
 }
 
 .vignette-citation {
-  z-index: 100;
+  z-index: 2;
 }
 
 .vignette-interior-cadre {
@@ -59,9 +59,12 @@
   padding: 40px;
 }
 
+.vignette-container-1 {
+  display: none;
+}
+
 .vignette-box {
   &.t-1 {
-    display: none;
     &.is-visible {
       display: block;
     }
@@ -72,7 +75,6 @@
   }
 
   &.t-2-1 {
-    display: none;
     &.is-visible {
       display: block;
     }
@@ -83,7 +85,6 @@
   }
 
   &.t-2-2 {
-    display: none;
     &.is-visible {
       display: block;
     }
@@ -94,7 +95,6 @@
   }
 
   &.t-3 {
-    display: none;
     &.is-visible {
       display: block;
     }
@@ -106,13 +106,6 @@
 
   &.t-4 {
     display: none;
-    &.is-visible {
-      display: block;
-    }
-
-    &.is-invisible {
-      display: none;
-    }
   }
 
   &.t-5 {
