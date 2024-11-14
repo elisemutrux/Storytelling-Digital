@@ -12,6 +12,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var containerImage1 = document.querySelector(".vignette-container-1");
   var containerImage2 = document.querySelector(".vignette-container-2");
+  var containerImage3 = document.querySelector(".vignette-container-3");
 
   var firstImageBox = document.querySelector(".vignette-box.t-1");
   var firstImageBtn1 = document.querySelector(".vignette-question.t-1");
@@ -40,10 +41,23 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var sevenImageBox = document.querySelector(".vignette-box.t-7");
 
+  var eightImageBox = document.querySelector(".vignette-box.t-8");
+  var eightImageBtn1 = document.querySelector(".vignette-question.t-8");
+  var eightImageBtn2 = document.querySelector(
+    ".vignette-question.t-second.t-8"
+  );
+
+  var nineImageBox = document.querySelector(".vignette-box.t-9");
+
+  var tenImageBox = document.querySelector(".vignette-box.t-10");
+
+  var elevenImageBox = document.querySelector(".vignette-box.t-11");
+
   //passer sur la page du jeu
   startupScreenBtn.addEventListener("click", () => {
     startupScreen.classList.add("is-press");
     gameScreen.classList.add("is-press");
+    document.body.style.overflow = "auto";
 
     timelineInit();
   });
@@ -154,12 +168,68 @@ window.addEventListener("DOMContentLoaded", function () {
 
     tl.to(map, {
       scale: 1,
-      transformOrigin: "45% 5%",
+      transformOrigin: "50% 5%",
     });
 
     //timeline 3ème partie
     tl.to(map, {
       scale: 2.5,
+      transformOrigin: "50% 5%",
+    });
+
+    tl.to(containerImage3, {
+      display: "block",
+      onStart: () => {
+        document.body.style.overflow = "hidden";
+      },
+    });
+
+    tl.to(tenImageBox, {
+      display: "block",
+    });
+
+    tl.to(tenImageBox, {
+      display: "none",
+    });
+
+    tl.to(
+      containerImage3,
+      {
+        display: "none",
+      },
+      "<"
+    );
+
+    tl.to(map, {
+      scale: 1,
+      transformOrigin: "45% 5%",
+    });
+
+    tl.to(map, {
+      scale: 1,
+      transformOrigin: "45% 5%",
+    });
+
+    tl.to(map, {
+      scale: 1,
+      transformOrigin: "50% 5%",
+    });
+
+    tl.to(map, {
+      scale: 2.5,
+      transformOrigin: "50% 5%",
+    });
+
+    tl.to(elevenImageBox, {
+      display: "block",
+    });
+
+    tl.to(elevenImageBox, {
+      display: "none",
+    });
+
+    tl.to(map, {
+      scale: 1,
       transformOrigin: "50% 5%",
     });
 
@@ -206,6 +276,34 @@ window.addEventListener("DOMContentLoaded", function () {
       fiveImageBox.classList.add("is-invisible");
       six2ImageBox.classList.add("is-visible");
       document.body.style.overflow = "auto";
+    });
+
+    eightImageBtn1.addEventListener("click", () => {
+      eightImageBox.classList.add("is-invisible");
+      nineImageBox.classList.add("is-visible");
+      document.body.style.overflow = "auto";
+    });
+
+    eightImageBtn2.addEventListener("click", () => {
+      document.querySelector(".vignette-box.t-9").classList.add("is-invisible");
+      eightImageBox.classList.add("is-invisible");
+      tenImageBox.classList.add("is-visible");
+      document.body.style.overflow = "auto";
+    });
+
+    const mapCursor = document.querySelector(".carte-cursor");
+    const mapSlider = document.querySelector(".carte-slider");
+    const sliderWidth = mapSlider.offsetWidth - mapCursor.offsetWidth;
+
+    gsap.to(mapCursor, {
+      x: sliderWidth,
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.body,
+        start: "top",
+        scrub: true,
+        markers: true,
+      },
     });
   }
 });

@@ -67,6 +67,10 @@
   display: none;
 }
 
+.vignette-container-3 {
+  display: none;
+}
+
 .vignette-box {
   &.t-1 {
     &.is-visible {
@@ -166,7 +170,6 @@
   }
 
   &.t-8 {
-    display: none;
     &.is-visible {
       display: block;
     }
