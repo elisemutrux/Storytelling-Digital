@@ -155,6 +155,16 @@
     display: none;
   }
 
+  &.t-7 .vignette {
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-invisible {
+      display: none;
+    }
+  }
+
   &.t-8 {
     display: none;
     &.is-visible {

@@ -40,8 +40,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var sevenImageBox = document.querySelector(".vignette-box.t-7");
 
-  let showScreen = true;
-
   //passer sur la page du jeu
   startupScreenBtn.addEventListener("click", () => {
     startupScreen.classList.add("is-press");
@@ -130,21 +128,19 @@ window.addEventListener("DOMContentLoaded", function () {
       display: "none",
     });
 
-    if (showScreen == true) {
-      tl.to(
-        sevenImageBox,
-        {
-          display: "block",
-          onStart: function () {
-            six1ImageBox.classList.remove("is-visible");
-          },
+    tl.to(
+      sevenImageBox,
+      {
+        display: "block",
+        onStart: function () {
+          six1ImageBox.classList.remove("is-visible");
         },
-        "<"
-      );
-      tl.to(sevenImageBox, {
-        display: "none",
-      });
-    }
+      },
+      "<"
+    );
+    tl.to(sevenImageBox, {
+      display: "none",
+    });
 
     tl.to(map, {
       scale: 1,
@@ -175,7 +171,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     firstImageBtn2.addEventListener("click", () => {
       firstImageBox.classList.add("is-invisible");
-
+      second1ImageBox.classList.add("is-invisible");
       second2ImageBox.classList.add("is-visible");
     });
 
@@ -186,7 +182,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
     second1ImageBtn2.addEventListener("click", () => {
       second1ImageBox.classList.add("is-invisible");
+      second2ImageBox.classList.add("is-invisible");
       threeImageBox.classList.add("is-visible");
+      document.body.style.overflow = "auto";
     });
 
     second2ImageBtn1.addEventListener("click", () => {
@@ -202,10 +200,12 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     fiveImageBtn2.addEventListener("click", () => {
+      document
+        .querySelector(".vignette-box.t-7 .vignette")
+        .classList.add("is-invisible");
       fiveImageBox.classList.add("is-invisible");
+      six2ImageBox.classList.add("is-visible");
       document.body.style.overflow = "auto";
-      showScreen = false;
-      console.log("fiveImageBtn2");
     });
   }
 });
