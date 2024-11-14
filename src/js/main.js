@@ -4,11 +4,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("DOMContentLoaded", function () {
+  window.setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 100);
   //variables
+  var mapCursor = document.querySelector(".carte-cursor");
+  var mapSlider = document.querySelector(".carte-slider");
+  const sliderWidth = mapSlider.offsetWidth - mapCursor.offsetWidth;
+
   var startupScreenBtn = document.querySelector(".startup-btn");
   var startupScreen = document.querySelector(".startup-screen");
   var gameScreen = document.querySelector(".game");
   var map = document.querySelector(".carte-img");
+
+  var btnSkip = document.querySelector(".carte-skip-btn");
 
   var containerImage1 = document.querySelector(".vignette-container-1");
   var containerImage2 = document.querySelector(".vignette-container-2");
@@ -53,6 +62,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var elevenImageBox = document.querySelector(".vignette-box.t-11");
 
+  btnSkip.addEventListener("click", function () {
+    isSkipped = true;
+  });
+
   //passer sur la page du jeu
   startupScreenBtn.addEventListener("click", () => {
     startupScreen.classList.add("is-press");
@@ -68,10 +81,14 @@ window.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: gameScreen,
         start: "top",
-        // end: "1000px",
+        end: "4000px",
         markers: true,
         pin: true,
         scrub: true,
+        onUpdate: (self) => {
+          var ysaProgress = self.progress * 88;
+          mapCursor.style.left = ysaProgress + "%";
+        },
       },
     });
 
@@ -89,7 +106,9 @@ window.addEventListener("DOMContentLoaded", function () {
       display: "block",
 
       onStart: () => {
+        // if (isSkipped == false) {
         document.body.style.overflow = "hidden";
+        // }
       },
     });
 
@@ -134,7 +153,9 @@ window.addEventListener("DOMContentLoaded", function () {
       display: "block",
 
       onStart: () => {
+        // if (isSkipped == false) {
         document.body.style.overflow = "hidden";
+        // }
       },
     });
 
@@ -180,7 +201,9 @@ window.addEventListener("DOMContentLoaded", function () {
     tl.to(containerImage3, {
       display: "block",
       onStart: () => {
+        // if (isSkipped == false) {
         document.body.style.overflow = "hidden";
+        // }
       },
     });
 
@@ -232,6 +255,13 @@ window.addEventListener("DOMContentLoaded", function () {
       scale: 1,
       transformOrigin: "50% 5%",
     });
+
+    // tl.to(btnBuy, {
+    //   opacity: 0,
+    //   onComplete: () => {
+    //     isSkipped = false;
+    //   },
+    // });
 
     //écouteurs d'évènements au click
     firstImageBtn1.addEventListener("click", () => {
@@ -291,19 +321,17 @@ window.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "auto";
     });
 
-    const mapCursor = document.querySelector(".carte-cursor");
-    const mapSlider = document.querySelector(".carte-slider");
-    const sliderWidth = mapSlider.offsetWidth - mapCursor.offsetWidth;
-
-    gsap.to(mapCursor, {
-      x: sliderWidth,
-      ease: "none",
-      scrollTrigger: {
-        trigger: document.body,
-        start: "top",
-        scrub: true,
-        markers: true,
-      },
-    });
+    //barre de défilement
+    // gsap.to(mapCursor, {
+    //   x: sliderWidth,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: document.body,
+    //     start: "top",
+    //     end: "5000px",
+    //     scrub: true,
+    //     markers: true,
+    //   },
+    // });
   }
 });

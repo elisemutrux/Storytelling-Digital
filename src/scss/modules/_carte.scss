@@ -30,16 +30,22 @@
 }
 
 .carte-skip-btn-decoration img {
-  padding-left: 105px;
+  margin-left: 105px;
   height: 75px;
 }
 
-.carte-cursor img {
-  position: fixed;
-  height: 175px;
-  bottom: 40px;
+.carte-container-slider .carte-cursor {
+  position: absolute;
   left: 0%;
+  bottom: 50px;
   z-index: 2;
+}
+
+.carte-cursor img {
+  // position: absolute;
+  height: 175px;
+  // left: 0%;
+  // z-index: 2;
 }
 
 .carte-slider-line {
@@ -48,7 +54,7 @@
   height: 5px;
   width: 90%;
   position: fixed;
-  bottom: 30px;
+  bottom: 50px;
   left: 5%;
   right: 5%;
   z-index: 2;
@@ -61,7 +67,7 @@
   width: 15px;
   transform: rotate(45deg);
   position: fixed;
-  bottom: 25px;
+  bottom: 45px;
   left: 4%;
   z-index: 2;
 }
@@ -73,7 +79,7 @@
   width: 15px;
   transform: rotate(45deg);
   position: fixed;
-  bottom: 25px;
+  bottom: 45px;
   right: 4%;
   z-index: 2;
 }
