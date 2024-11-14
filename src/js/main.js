@@ -62,10 +62,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var elevenImageBox = document.querySelector(".vignette-box.t-11");
 
-  btnSkip.addEventListener("click", function () {
-    isSkipped = true;
-  });
-
   //passer sur la page du jeu
   startupScreenBtn.addEventListener("click", () => {
     startupScreen.classList.add("is-press");
@@ -82,7 +78,7 @@ window.addEventListener("DOMContentLoaded", function () {
         trigger: gameScreen,
         start: "top",
         end: "4000px",
-        markers: true,
+        // markers: true,
         pin: true,
         scrub: true,
         onUpdate: (self) => {
@@ -106,9 +102,7 @@ window.addEventListener("DOMContentLoaded", function () {
       display: "block",
 
       onStart: () => {
-        // if (isSkipped == false) {
         document.body.style.overflow = "hidden";
-        // }
       },
     });
 
@@ -153,9 +147,7 @@ window.addEventListener("DOMContentLoaded", function () {
       display: "block",
 
       onStart: () => {
-        // if (isSkipped == false) {
         document.body.style.overflow = "hidden";
-        // }
       },
     });
 
@@ -201,9 +193,7 @@ window.addEventListener("DOMContentLoaded", function () {
     tl.to(containerImage3, {
       display: "block",
       onStart: () => {
-        // if (isSkipped == false) {
         document.body.style.overflow = "hidden";
-        // }
       },
     });
 
@@ -255,13 +245,6 @@ window.addEventListener("DOMContentLoaded", function () {
       scale: 1,
       transformOrigin: "50% 5%",
     });
-
-    // tl.to(btnBuy, {
-    //   opacity: 0,
-    //   onComplete: () => {
-    //     isSkipped = false;
-    //   },
-    // });
 
     //écouteurs d'évènements au click
     firstImageBtn1.addEventListener("click", () => {
@@ -320,18 +303,5 @@ window.addEventListener("DOMContentLoaded", function () {
       tenImageBox.classList.add("is-visible");
       document.body.style.overflow = "auto";
     });
-
-    //barre de défilement
-    // gsap.to(mapCursor, {
-    //   x: sliderWidth,
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: document.body,
-    //     start: "top",
-    //     end: "5000px",
-    //     scrub: true,
-    //     markers: true,
-    //   },
-    // });
   }
 });

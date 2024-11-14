@@ -22,6 +22,11 @@
   line-height: 32px;
 }
 
+.buy-autor span {
+  font-family: Avenir;
+  font-weight: 600;
+}
+
 .buy-texte {
   margin-top: 35px;
   color: #000;
@@ -90,4 +95,5 @@
   text-underline-offset: auto;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }

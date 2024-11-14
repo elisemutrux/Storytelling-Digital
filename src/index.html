@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="game">
+    <div class="game" id="restart">
       <div class="carte-skip-btn">
         <a href="#skip">skip</a>
       </div>
@@ -191,7 +191,11 @@
             <div class="buy-shop-box" id="skip">
               <div class="buy-shop">Commander sur Fnac.ch</div>
               <div class="buy-order">ou</div>
-              <div class="buy-return">Recommencer l'aventure</div>
+              <div class="buy-return">
+                <a onclick="location.reload()" href="#restart">
+                  Recommencer l'aventure
+                </a>
+              </div>
             </div>
           </div>
           <div class="col-1 offset-1">
