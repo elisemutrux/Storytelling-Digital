@@ -4,6 +4,21 @@
     <meta charset="utf-8" />
     <title>Furieuse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Furieuse" />
+    <meta
+      property="og:description"
+      content="Découvrez la vie surprenante de Ysa, à travers un jeu immersif."
+    />
+    <meta
+      property="og:image"
+      content="https://www.comixtrip.fr/wp-content/uploads/2022/10/burniat-furieuse-9.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Furieuse" />
+    <meta
+      name="twitter:description"
+      content="Découvrez la vie surprenante de Ysa, à travers un jeu immersif."
+    />
     <link rel="stylesheet" href="scss/main.scss" />
     <link rel="stylesheet" href="https://use.typekit.net/dvb1qss.css" />
     <link rel="icon" type="img/png" href="../img/icon-ysa.png" />
@@ -20,13 +35,13 @@
         </div>
       </div>
     </div>
-    <div class="game" id="restart">
-      <div class="carte-skip-btn">
+    <div class="game">
+      <div class="carte-skip-btn" href="#skip">
         <a href="#skip">skip</a>
-      </div>
-      <div class="carte-skip-btn-decoration">
-        <img src="../img/skip-decoration.png?as=webp" />
-        <img src="../img/skip-decoration2.png?as=webp" />
+        <div class="carte-skip-btn-decoration">
+          <img src="../img/skip-decoration.png?as=webp" />
+          <img src="../img/skip-decoration2.png?as=webp" />
+        </div>
       </div>
       <div class="carte">
         <img class="carte-img" src="../img/carte.webp" />
@@ -163,7 +178,7 @@
       </div>
     </div>
 
-    <div class="buy-screen">
+    <div class="buy-screen" id="skip">
       <div class="container">
         <div class="row">
           <div class="col-4">
@@ -189,12 +204,12 @@
           </div>
           <div class="col-4">
             <div class="buy-shop-box" id="skip">
-              <div class="buy-shop">Commander sur Fnac.ch</div>
+              <div class="buy-shop">
+                <a href="https://www.fr.fnac.ch/">Commander sur Fnac.ch</a>
+              </div>
               <div class="buy-order">ou</div>
               <div class="buy-return">
-                <a onclick="location.reload()" href="#restart">
-                  Recommencer l'aventure
-                </a>
+                <a onclick="location.reload()"> Recommencer l'aventure </a>
               </div>
             </div>
           </div>

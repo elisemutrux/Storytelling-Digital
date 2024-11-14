@@ -9,8 +9,6 @@ window.addEventListener("DOMContentLoaded", function () {
   }, 100);
   //variables
   var mapCursor = document.querySelector(".carte-cursor");
-  var mapSlider = document.querySelector(".carte-slider");
-  const sliderWidth = mapSlider.offsetWidth - mapCursor.offsetWidth;
 
   var startupScreenBtn = document.querySelector(".startup-btn");
   var startupScreen = document.querySelector(".startup-screen");
@@ -301,6 +299,10 @@ window.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".vignette-box.t-9").classList.add("is-invisible");
       eightImageBox.classList.add("is-invisible");
       tenImageBox.classList.add("is-visible");
+      document.body.style.overflow = "auto";
+    });
+
+    btnSkip.addEventListener("click", () => {
       document.body.style.overflow = "auto";
     });
   }
