@@ -83,6 +83,10 @@ window.addEventListener("DOMContentLoaded", function () {
           var ysaProgress = self.progress * 88;
           mapCursor.style.left = ysaProgress + "%";
         },
+
+        onComplete: () => {
+          document.body.style.overflow = "auto";
+        },
       },
     });
 
@@ -96,6 +100,7 @@ window.addEventListener("DOMContentLoaded", function () {
       "<"
     );
 
+    //box-pour l'appartition de la partie de la timeline 1
     tl.to(containerImage1, {
       display: "block",
 
@@ -149,6 +154,7 @@ window.addEventListener("DOMContentLoaded", function () {
       },
     });
 
+    //box-pour l'appartition de la partie de la timeline 2
     tl.to(containerImage2, {
       display: "none",
     });
@@ -188,6 +194,7 @@ window.addEventListener("DOMContentLoaded", function () {
       transformOrigin: "50% 5%",
     });
 
+    //box-pour l'appartition de la partie de la timeline 3
     tl.to(containerImage3, {
       display: "block",
       onStart: () => {
@@ -245,22 +252,26 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     //écouteurs d'évènements au click
+    //choix à l'image 1 – btn1
     firstImageBtn1.addEventListener("click", () => {
       firstImageBox.classList.add("is-invisible");
       second1ImageBox.classList.add("is-visible");
     });
 
+    //choix à l'image 1 – btn2
     firstImageBtn2.addEventListener("click", () => {
       firstImageBox.classList.add("is-invisible");
       second1ImageBox.classList.add("is-invisible");
       second2ImageBox.classList.add("is-visible");
     });
 
+    //choix à l'image 2-1 – btn1
     second1ImageBtn1.addEventListener("click", () => {
       second1ImageBox.classList.add("is-invisible");
       second2ImageBox.classList.add("is-visible");
     });
 
+    //choix à l'image 2-1 – btn2
     second1ImageBtn2.addEventListener("click", () => {
       second1ImageBox.classList.add("is-invisible");
       second2ImageBox.classList.add("is-invisible");
@@ -268,18 +279,21 @@ window.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "auto";
     });
 
+    //choix à l'image 2-2 – btn1
     second2ImageBtn1.addEventListener("click", () => {
       second2ImageBox.classList.add("is-invisible");
       threeImageBox.classList.add("is-visible");
       document.body.style.overflow = "auto";
     });
 
+    //choix à l'image 5 – btn1
     fiveImageBtn1.addEventListener("click", () => {
       fiveImageBox.classList.add("is-invisible");
       six1ImageBox.classList.add("is-visible");
       document.body.style.overflow = "auto";
     });
 
+    //choix à l'image 5 – btn2
     fiveImageBtn2.addEventListener("click", () => {
       document
         .querySelector(".vignette-box.t-7 .vignette")
@@ -289,12 +303,14 @@ window.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "auto";
     });
 
+    //choix à l'image 8 – btn1
     eightImageBtn1.addEventListener("click", () => {
       eightImageBox.classList.add("is-invisible");
       nineImageBox.classList.add("is-visible");
       document.body.style.overflow = "auto";
     });
 
+    //choix à l'image 8 – btn2
     eightImageBtn2.addEventListener("click", () => {
       document.querySelector(".vignette-box.t-9").classList.add("is-invisible");
       eightImageBox.classList.add("is-invisible");
@@ -302,6 +318,7 @@ window.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "auto";
     });
 
+    //écouteur d'évènement pour le btn skip
     btnSkip.addEventListener("click", () => {
       document.body.style.overflow = "auto";
     });
