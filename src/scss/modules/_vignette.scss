@@ -28,6 +28,12 @@
   top: 66%;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: ease-in 0.2s;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
 
   &.t-second {
     top: 74%;

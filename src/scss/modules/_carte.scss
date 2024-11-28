@@ -15,6 +15,12 @@
   z-index: 2;
   text-decoration: none;
   z-index: 1;
+  transition: ease-in 0.2s;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
 }
 
 .carte-skip-btn {
